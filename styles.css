@@ -11,6 +11,31 @@ body {
 
 }
 
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* ajuste conforme necessário */
+  width: 100%;
+}
+
+.project {
+  min-width: calc(100% / 3); /* ajuste para mostrar 3 projetos por vez */
+  transition: transform 0.5s ease-in-out;
+  flex-shrink: 0;
+}
+
+.project img {
+  max-height: 200px; /* ajuste conforme necessário */
+}
+
+.project h3 {
+  text-align: center;
+}
+
+
+
+
 header {
     background: #333;
     color: #fff;
@@ -61,13 +86,22 @@ header nav {
 #showcase p {
     font-size: 20px;
 }
+
+#showcase img {
+  margin-top: 15px;
+  height: 80%;
+  width: 25%;
+  border-radius: 20px;
+}
 .content {
     padding: 20px;
     background: #333;
+    color:#fff;
     margin-top: 20px;
 }
 .content h2 {
     text-align: center;
+    
 }
 .content p {
     line-height: 1.6;
@@ -84,6 +118,29 @@ header nav {
     padding: 10px;
     border: #ccc 1px solid;
 }
+
+#contato {
+  display: flex;
+}
+
+.social-links {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
 footer {
     background: #333;
     color: #fff;
