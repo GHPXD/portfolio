@@ -1,6 +1,7 @@
 let currentIndex = 0;
 const projects = document.querySelectorAll('.carousel .project');
 const projectCount = projects.length;
+let intervalId;
 
 // Duplica os primeiros projetos no final para criar a ilusão de continuidade
 const container = projects[0].parentNode;
@@ -38,4 +39,15 @@ projects.forEach((project, index) => {
   project.style.transform = `translateX(-${0}px)`;
 });
 
-setInterval(showNextProject, 2000);
+intervalId = setInterval(showNextProject, 2000);
+
+// Pausa a esteira ao passar o mouse sobre as imagens
+projects.forEach(project => {
+  project.addEventListener('mouseover', () => {
+    clearInterval(intervalId);
+  });
+
+  project.addEventListener('mouseout', () => {
+    intervalId = setInterval(showNextProject, 2000);
+  });
+});
