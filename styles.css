@@ -1,0 +1,343 @@
+/* Variáveis de Cores */
+:root {
+    --bg-primary: #f3f4f6;
+    --bg-secondary: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+}
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.page-container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Navegação */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #1f2937;
+    color: white;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+/* Seção Sobre Mim */
+.about-section {
+    display: flex;
+    align-items: center;    
+    padding: 100px 0 50px;
+    gap: 50px;
+}
+
+.profile-image-container {
+    flex: 0 0 300px; /* Define uma largura fixa para o container da imagem */
+}
+
+.profile-image {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1; /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-tag {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.skill-tag.python { background-color: #dbeafe; color: #1e40af; }
+.skill-tag.javascript { background-color: #d1fae5; color: #065f46; }
+.skill-tag.html-css { background-color: #fee2e2; color: #991b1b; }
+
+/* Seção Experiência */
+.experience-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-company {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.tech-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-icon {
+    background-color: #f3f4f6;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+
+.tech-icon.python { background-color: #dbeafe; color: #3776AB; }
+.project-tag.javascript { background-color: #d1fae5; color: #065f46; }
+.project-tag.html { background-color: #fee2e2; color: #991b1b; }
+.tech-icon.java {background-color: #007396; color: #FFFFFF;}
+.tech-icon.springboot {
+    background-color: #6DB33F; /* Verde do logotipo do Spring Boot */
+    color: #FFFFFF; /* Branco para o texto */
+}
+
+/* Seção Projetos */
+.projects-section {
+    margin-bottom: 50px;
+}
+ 
+.projects-filter {
+    display: flex;
+    border-radius: 50px;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+ 
+.projects-filter button {
+    padding: 8px 15px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+.projects-filter button:hover {
+    background-color: #1c67d7;
+    color: var(--bg-primary)
+}
+ 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ 
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+ 
+.project-card:hover {
+    transform: scale(1.05);
+}
+ 
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+ 
+.project-card p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+ 
+.project-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 0px;
+    font-size: 0.9rem;
+}
+ 
+.project-tag.python { background-color: #dbeafe; color: #1e40af; }
+.project-tag.javascript { background-color: #d1fae5; color: #065f46; }
+.project-tag.html { background-color: #fee2e2; color: #991b1b; }
+.project-tag.java { background-color: #f0f9ff; color: #1d4ed8; }
+
+/* Seção Certificados */
+.certificates-section {
+    margin-bottom: 50px;
+}
+ 
+.certificates-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+ 
+.certificates-filter button {
+    padding: 8px 15px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+.certificates-filter button:hover {
+    background-color: #1c67d7;
+    color: var(--bg-primary)
+}
+ 
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ 
+.certificate-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+ 
+.certificate-card:hover {
+    transform: scale(1.05);
+}
+ 
+.certificate-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+ 
+.certificate-card p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+ 
+.certificate-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+ 
+.certificate-tag.python { background-color: #dbeafe; color: #1e40af; }
+.certificate-tag.javascript { background-color: #d1fae5; color: #065f46; }
+.certificate-tag.html { background-color: #fee2e2; color: #991b1b; }
+
+/* Seção Contato */
+
+footer {
+    width: 100%;
+    background-color: #1f2937; /* mesma cor de fundo da navbar */
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0; /* ajuste conforme necessário */
+}
+
+.contact-section {
+    background-color: #1f2937;
+    margin-bottom: 1px;
+    color: white;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+}
