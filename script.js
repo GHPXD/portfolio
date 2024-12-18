@@ -371,3 +371,46 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Rest of the existing script.js code remains the same
+
+// Toggle de Navegação Mobile
+document.addEventListener('DOMContentLoaded', function() {
+  // Criar menu hambúrguer para mobile
+  const navContainer = document.querySelector('.nav-container');
+  const navLinks = document.querySelector('.nav-links');
+  
+  // Criar elemento de menu hambúrguer
+  const hamburgerMenu = document.createElement('div');
+  hamburgerMenu.classList.add('hamburger-menu');
+  hamburgerMenu.innerHTML = `
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  `;
+  
+  // Adicionar menu hambúrguer ao container de navegação
+  navContainer.appendChild(hamburgerMenu);
+  
+  // Alternar menu mobile
+  hamburgerMenu.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      this.classList.toggle('active');
+  });
+  
+  // Fechar menu mobile quando um link é clicado
+  navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+          hamburgerMenu.classList.remove('active');
+      });
+  });
+  
+  // Fechar menu mobile ao clicar fora
+  document.addEventListener('click', function(event) {
+      if (!navContainer.contains(event.target)) {
+          navLinks.classList.remove('active');
+          hamburgerMenu.classList.remove('active');
+      }
+  });
+});
+
+// Código de script existente permanece o mesmo...

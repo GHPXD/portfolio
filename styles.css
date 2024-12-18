@@ -723,3 +723,185 @@ footer {
     }
   }
   
+
+  /* Ajustes Responsivos */
+@media screen and (max-width: 1200px) {
+    .page-container {
+        margin: 0 20px;
+    }
+
+    .nav-container {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* Seção Sobre Mim */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 80px 0 30px;
+    }
+
+    .profile-image-container {
+        flex: 0 0 250px;
+    }
+
+    .skills-tags {
+        justify-content: center;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(33.33% - 10px);
+    }
+
+    /* Seção de Experiência */
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Projetos */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Seção de Certificados */
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Navegação */
+    .nav-links {
+        display: none; /* Preparar para menu móvel */
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Seção Sobre Mim */
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    /* Seção de Projetos */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Certificados */
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Contato */
+    .card .left, .card .right {
+        margin: 0;
+    }
+
+    .icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-container {
+        margin: 0 10px;
+    }
+
+    .nav-container {
+        margin: 0 10px;
+        padding: 10px 5px;
+    }
+
+    .profile-image-container {
+        flex: 0 0 200px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-tag {
+        flex: 1 0 100%;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-card, .project-card, .certificate-card {
+        padding: 15px;
+    }
+
+    .tech-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Menu de Navegação Mobile */
+@media screen and (max-width: 992px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f2937;
+        padding: 20px;
+    }
+
+    .nav-links.active a {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Responsividade para Modal */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    #caption {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para Fundo Canvas */
+@media screen and (max-width: 768px) {
+    #canvas {
+        display: none; /* Opcional: ocultar canvas complexo em telas menores */
+    }
+}
