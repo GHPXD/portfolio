@@ -22,7 +22,6 @@ function filterCertificates(tech) {
     });
 }
  
-
 // Função de rolagem suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -219,7 +218,7 @@ window.requestAnimFrame = function () {
       }
     }
   
-    let maxl = 300,
+    let maxl = 250,
       minl = 50,
       n = 30,
       numt = 500,
