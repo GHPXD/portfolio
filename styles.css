@@ -18,17 +18,17 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url();
+    background-image: url(background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: var(--text-primary);
+    color: var( --bg-primary);
     line-height: 1.6;
 }
 
 .page-container {
-    max-width: 1700px;
-    margin: 0 auto;
+    max-width: 1300px;
+    margin: 0 40px; /* margem de 10px de cada lado */
     padding: 0;
 }
 
@@ -47,8 +47,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1700px;
-    margin: 0 auto;
+    max-width: 1300px; 
+    margin: 0 40px; /* margem de 10px de cada lado */
     padding: 15px 10px;
 }
 
@@ -112,6 +112,7 @@ nav {
 
 /* Seção Experiência */
 .experience-section {
+    color: var();
     margin-bottom: 50px;
 }
 
@@ -127,6 +128,7 @@ nav {
 }
 
 .experience-card {
+    color: var(--text-primary);
     background-color: white;
     border-radius: 10px;
     padding: 25px;
@@ -284,6 +286,7 @@ nav {
  
 .project-card {
     background-color: white;
+    color: var(--text-primary);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -346,6 +349,7 @@ nav {
  
 .certificate-card {
     background-color: white;
+    color: var(--text-primary);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -391,7 +395,7 @@ footer {
 }
 
 .contact-section {
-    background-color: #1f2937;
+    background-color: #000000;
     margin-bottom: 1px;
     color: white;
     text-align: center;
