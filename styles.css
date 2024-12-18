@@ -163,14 +163,91 @@ nav {
     transform: scale(1.1);
 }
 
-.tech-icon.python { background-color: #dbeafe; color: #3776AB; }
-.project-tag.javascript { background-color: #d1fae5; color: #065f46; }
-.project-tag.html { background-color: #fee2e2; color: #991b1b; }
-.tech-icon.java {background-color: #007396; color: #FFFFFF;}
-.tech-icon.springboot {
-    background-color: #6DB33F; /* Verde do logotipo do Spring Boot */
-    color: #FFFFFF; /* Branco para o texto */
+.tech-icon.python { 
+    background-color: #dbeafe; 
+    color: #3776AB; 
 }
+
+.tech-icon.java {
+    background-color: #007396; 
+    color: #FFFFFF;
+}
+
+.tech-icon.spring-boot {
+    background-color: #6DB33F; 
+    color: #FFFFFF;
+}
+
+.tech-icon.oraclesql {
+    background-color: #C74634;
+    color: #FFFFFF;
+}
+
+.tech-icon.mysql {
+    background-color: #00758F;
+    color: #FFFFFF;
+}
+
+.tech-icon.wiki {
+    background-color: #F7F7F7;
+    color: #000000;
+}
+
+.tech-icon.jira {
+    background-color: #0052CC;
+    color: #FFFFFF;
+}
+
+.tech-icon.confluence {
+    background-color: #172B4D;
+    color: #FFFFFF;
+}
+
+.tech-icon.gitlab {
+    background-color: #FCA121;
+    color: #FFFFFF;
+}
+
+.tech-icon.docker {
+    background-color: #2496ED;
+    color: #FFFFFF;
+}
+
+.tech-icon.kafka {
+    background-color: #231F20;
+    color: #FFFFFF;
+}
+
+.tech-icon.react {
+    background-color: #61DAFB;
+    color: #282C34;
+}
+
+.tech-icon.pandas {
+    background-color: #150458;
+    color: #FFFFFF;
+}
+
+.tech-icon.sap {
+    background-color: #0070E0;
+    color: #FFFFFF;
+}
+
+.tech-icon.vba {
+    background-color: #217346;
+    color: #FFFFFF;
+}
+
+.tech-icon.powerbi {
+    background-color: #F2C811;
+    color: #000000;
+}
+
+.tech-icon.power-automate {
+    background-color: #0066FF;
+    color: #FFFFFF;
+}
+
 
 /* Seção Projetos */
 .projects-section {
@@ -234,11 +311,6 @@ nav {
     border-radius: 0px;
     font-size: 0.9rem;
 }
- 
-.project-tag.python { background-color: #dbeafe; color: #1e40af; }
-.project-tag.javascript { background-color: #d1fae5; color: #065f46; }
-.project-tag.html { background-color: #fee2e2; color: #991b1b; }
-.project-tag.java { background-color: #f0f9ff; color: #1d4ed8; }
 
 /* Seção Certificados */
 .certificates-section {
