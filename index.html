@@ -167,8 +167,6 @@
             </div>
         </section>
 
-
-
         <!-- Seção Projetos -->
         <section id="projetos" class="projects-section">
             <h2 class="section-title">Projetos</h2>
@@ -240,32 +238,38 @@
             <h2 class="section-title">Certificados</h2>
             
             <div class="certificates-filter">
-                <button onclick="filterCertificates('all')">Todos</button>
-                <button onclick="filterCertificates('full')">Fullstack</button>
-                <button onclick="filterCertificates('back')">Back-end</button>
-                <button onclick="filterCertificates('front')">Front-end</button>
-                <button onclick="filterCertificates('dados')">Dados</button>
-                <button onclick="filterCertificates('diversos')">Diversos</button>
+                <button onclick="filterCertificates('all')" class="filter-btn active">Todos</button>
+                <button onclick="filterCertificates('full')" class="filter-btn">Fullstack</button>
+                <button onclick="filterCertificates('back')" class="filter-btn">Back-end</button>
+                <button onclick="filterCertificates('front')" class="filter-btn">Front-end</button>
+                <button onclick="filterCertificates('dados')" class="filter-btn">Dados</button>
+                <button onclick="filterCertificates('diversos')" class="filter-btn">Diversos</button>
             </div>
-        
-            <div id="certificates-grid" class="certificates-grid">
-                <div class="certificate-card" data-tech="diversos">
-                    <h3>Certificado Yellow Belt</h3>
-                    <img src="/data/media/certificados/Yellow Belt.jpg" alt="Certificado Python Avançado">                    
-                    <div class="certificate-tag diversos">Diversos</div>
+
+            <div class="certificates-carousel-container">
+                <div class="certificates-carousel-wrapper">
+                    <div id="certificates-carousel" class="certificates-carousel">
+                        <!-- Os certificados serão inseridos aqui dinamicamente -->
+                    </div>
                 </div>
-                <div class="certificate-card" data-tech="full">
-                    <h3>Santander Bootcamp 2023 - Fullstack Java + Angular</h3>
-                    <img src="/data/media/certificados/JAVA-ANGULAR.jpg" alt="Desenvolvimento Web JavaScript">
-                    <div class="certificate-tag full">Fullstack</div>
+                <div class="certificates-carousel-controls">
+                    <button class="certificates-carousel-btn prev-btn" onclick="moveCertificatesCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="certificates-carousel-btn next-btn" onclick="moveCertificatesCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="certificate-card" data-tech="diversos">
-                    <h3>GIT - Básico ao avançado</h3>
-                    <img src="Git.jpg" alt="HTML e CSS Responsivo">
-                    <div class="certificate-tag diversos">Diversos</div>
-                </div>
-            </div>            
+            </div>
         </section>
+
+        <!-- Modal para Certificados (mantendo o zoom atual) -->
+        <div id="certificateModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+
 
         <!-- Seção Contato -->
         <footer id="contato" class="contact-section">
