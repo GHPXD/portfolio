@@ -333,10 +333,6 @@ window.requestAnimFrame = function () {
     setInterval(loop, 1000 / 60);
   };
 
-  // Fim
-
-  // Existing JavaScript code remains the same...
-
 // Add Certificate Image Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
   // Get the modal
@@ -435,8 +431,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Substitua toda a seção de projetos no JavaScript por este código
-
 // Dados dos projetos
 const projectsData = {
     'Análise de Reviews Negativos com PySpark': {
@@ -446,25 +440,25 @@ const projectsData = {
         image: './data/media/projects/Analise_Reviews_PySpark.png',
         category: 'Python'
     },
-    'PJBL 02 - Tratamento de Dados': {
+    'Insight de Casos de Covid-19': {
         repo: 'https://github.com/GHPXD/PJBL-01',
-        readme: './data/docs/projeto2.md',
+        readme: './data/docs/Run Man Jump.md',
         tech: ['python', 'pandas', 'pyplot'],
-        image: './data/media/projects/PJBL.jpg',
+        image: './data/media/projects/PyCovid.png',
         category: 'Python'
     },
     'Jump Man Game': {
         repo: 'https://ghpxd.github.io/run-man/',
-        readme: './data/docs/projeto3.md',
+        readme: './data/docs/Run Man Jump.md',
         tech: ['html', 'css', 'javascript'],
-        image: './data/media/projects/jump.jpg',
+        image: './data/media/projects/jump-man-run.png',
         category: 'JavaScript'
     },
     'Jokenpo Game': {
         repo: 'https://ghpxd.github.io/Jokenpo/',
-        readme: './data/docs/projeto4.md',
+        readme: './data/docs/Jokenpo.md',
         tech: ['html', 'css', 'javascript'],
-        image: './data/media/projects/jokenpo.jpg',
+        image: './data/media/projects/Jokenpo.png',
         category: 'JavaScript'
     },
     'Sistema Pet Shop': {
