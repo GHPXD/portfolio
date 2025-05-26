@@ -813,20 +813,18 @@ function moveExperienceCarousel(direction) {
     carousel.style.transform = `translateX(${translateX}%)`;
 }
 
-// Adicione este código no final do seu script.js
-
 // Dados dos certificados
 const certificatesData = {
     'Certificado Yellow Belt': {
-        image: 'Yellow Belt.jpg',
+        image: './data/media/certificates/Yellow Belt.jpg',
         category: 'diversos'
     },
     'Santander Bootcamp 2023 - Fullstack Java + Angular': {
-        image: 'JAVA-ANGULAR.jpg',
+        image: './data/media/certificates/JAVA-ANGULAR.jpg',
         category: 'full'
     },
     'GIT - Básico ao avançado': {
-        image: 'Git.jpg',
+        image: './data/media/certificates/Git.jpg',
         category: 'diversos'
     }
 };
