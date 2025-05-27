@@ -436,7 +436,7 @@ const projectsData = {
     'Análise de Reviews Negativos com PySpark': {
         repo: 'https://github.com/GHPXD/Comparison-of-Negative-Movie-Reviews',
         readme: './data/docs/Comparison of Negative Movie Reviews.md',
-        tech: ['python', 'pandas', 'pyplot'],
+        tech: ['python', 'pandas', 'pyplot', 'pyspark'],
         image: './data/media/projects/Analise_Reviews_PySpark.png',
         category: 'Python'
     },
@@ -509,7 +509,8 @@ function getTechIcon(tech) {
         html: 'fab fa-html5',
         css: 'fab fa-css3-alt',
         pandas: 'fas fa-table',
-        pyplot: 'fas fa-chart-line'
+        pyplot: 'fas fa-chart-line',
+        pyspark: 'fas fa-fire',
     };
     return icons[tech] || 'fas fa-code';
 }
@@ -787,8 +788,6 @@ function parseMarkdown(markdown) {
     
     return html;
 }
-
-// Adicione este código no final do seu script.js
 
 // Variáveis do carrossel de experiência
 let currentExperienceIndex = 0;
