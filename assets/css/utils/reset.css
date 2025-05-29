@@ -1,0 +1,49 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../../../assets/media/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--bg-primary);
+    line-height: 1.6;
+}
+
+.page-container {
+    margin: 0 40px; /* margem de 10px de cada lado */
+    padding: 0;
+}
+
+/* Canvas Background */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Seções Gerais */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+/* Animações de entrada */
+.fade-out {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

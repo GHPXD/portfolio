@@ -1,0 +1,248 @@
+/* Ajustes Responsivos */
+@media screen and (max-width: 1200px) {
+    .page-container {
+        margin: 0 20px;
+    }
+
+    .nav-container {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* Seção Sobre Mim */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 80px 0 30px;
+    }
+
+    .profile-image-container {
+        flex: 0 0 250px;
+    }
+
+    .skills-tags {
+        justify-content: center;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(33.33% - 10px);
+    }
+
+    /* Seção de Experiência */
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Projetos */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Seção de Certificados */
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Navegação */
+    .nav-links {
+        display: none; /* Preparar para menu móvel */
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Seção Sobre Mim */
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    /* Seção de Projetos */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Certificados */
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção de Contato */
+    .card .left, .card .right {
+        margin: 0;
+    }
+
+    .icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-container {
+        margin: 0 10px;
+    }
+
+    .nav-container {
+        margin: 0 10px;
+        padding: 10px 5px;
+    }
+
+    .profile-image-container {
+        flex: 0 0 200px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-tag {
+        flex: 1 0 100%;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-card, .project-card, .certificate-card {
+        padding: 15px;
+    }
+
+    .tech-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Menu de Navegação Mobile */
+@media screen and (max-width: 992px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 300px;
+        background-color: #1f2937;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+        z-index: 100;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        margin: 20px 0;
+        font-size: 1.1rem;
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(59, 130, 246, 0.2);
+    }
+}
+
+/* Responsividade para Modal */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    #caption {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para Fundo Canvas */
+@media screen and (max-width: 768px) {
+    #canvas {
+        display: none; /* Opcional: ocultar canvas complexo em telas menores */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        height: 180px;
+    }
+    
+    .message {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        height: 160px;
+    }
+}
+
+/* Responsividade adicional para componentes específicos */
+@media screen and (max-width: 1024px) {
+    .description {
+        font-size: 1rem;
+    }
+    
+    .card-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .projects-filter, .certificates-filter {
+        gap: 5px;
+    }
+}
+
+/* Ajustes finais para telas muito pequenas */
+@media screen and (max-width: 360px) {
+    .page-container {
+        margin: 0 5px;
+    }
+    
+    .nav-container {
+        margin: 0 5px;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+}

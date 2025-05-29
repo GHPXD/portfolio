@@ -1,0 +1,39 @@
+/* Arquivo principal que importa todos os outros */
+@import url('./utils/variables.css');
+@import url('./utils/reset.css');
+@import url('./components/navigation.css');
+@import url('./components/about.css');
+@import url('./components/experience.css');
+@import url('./components/projects.css');
+@import url('./components/certificates.css');
+@import url('./components/contact.css');
+@import url('./components/modal.css');
+@import url('./utils/responsive.css');
+
+/* Canvas Background */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Seções Gerais */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+/* Animações de entrada */
+.fade-out {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,10 @@
+/* Variáveis de Cores */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #000000;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+}

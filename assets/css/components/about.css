@@ -1,0 +1,163 @@
+/* Seção Sobre Mim */
+.about-section {
+    display: flex;
+    align-items: center;    
+    padding: 100px 0 50px;
+    gap: 50px;
+}
+
+.profile-container {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.profile-image {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.profile-image:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.4);
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-full);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.profile-image-container:hover::before {
+    opacity: 0.3;
+}
+
+.about-content {
+    flex: 1; /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.skills-section { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    flex: 1 0 calc(20% - 10px);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Cores das tecnologias */
+.tech-icon.python, .skill-tag.python {background-color: #dbeafe; color: #3776AB;}
+.tech-icon.java, .skill-tag.java {background-color: #007396; color: #FFFFFF;}
+.tech-icon.spring-boot, .skill-tag.spring-boot {background-color: #6DB33F; color: #FFFFFF;}
+.tech-icon.oraclesql, .skill-tag.oraclesql {background-color: #be2626bd; color: #FFFFFF;}
+.tech-icon.mysql, .skill-tag.mysql {background-color: #00758F; color: #FFFFFF;}
+.tech-icon.confluence, .skill-tag.confluence {background-color: #172B4D; color: #FFFFFF;}
+.tech-icon.jira, .skill-tag.jira {background-color: #0052CC; color: #FFFFFF;}
+.tech-icon.gitlab, .skill-tag.gitlab {background-color: #362e23; color: #FFFFFF;}
+.tech-icon.docker, .skill-tag.docker {background-color: #2496ED; color: #FFFFFF;}
+.tech-icon.kafka, .skill-tag.kafka {background-color: #231F20; color: #FFFFFF;}
+.tech-icon.react, .skill-tag.react {background-color: #61DAFB; color: #282C34;}
+.tech-icon.pandas, .skill-tag.pandas {background-color: #150458; color: #FFFFFF;}
+.tech-icon.sap, .skill-tag.sap {background-color: #0070E0; color: #FFFFFF;}
+.tech-icon.vba, .skill-tag.vba {background-color: #217346; color: #FFFFFF;}
+.tech-icon.powerbi, .skill-tag.powerbi {background-color: #c5a411; color: #000000;}
+.tech-icon.power-automate, .skill-tag.power-automate {background-color: #0066FF; color: #FFFFFF;}
+.tech-icon.html, .skill-tag.html {background-color: #E34F26; color: #FFFFFF;} 
+.tech-icon.css, .skill-tag.css {background-color: #1572B6; color: #FFFFFF;}
+.tech-icon.javascript, .skill-tag.javascript { background-color: #F7DF1E; color: #000000;}
+.tech-icon.pyplot, .skill-tag.pyplot { background-color: #1f77b4; color: #FFFFFF;}
+.tech-icon.aws, .skill-tag.aws { background-color: #c2880cbd; color: #FFFFFF;}
+.tech-icon.selenium, .skill-tag.selenium { background-color: #aa341fbd; color: #FFFFFF;}
+.tech-icon.numpy, .skill-tag.numpy {background-color: #4B8BBE; color: #FFFFFF;}
+.tech-icon.pdfplumber, .skill-tag.pdfplumber {background-color: #C92A2A; color: #FFFFFF;}
+.tech-icon.pyinstaller, .skill-tag.pyinstaller {background-color: #5D6D7E; color: #FFFFFF;}
+.tech-icon.pyspark, .skill-tag.pyspark {background-color: #F89820; color: #FFFFFF;}
+
+/* Responsividade */
+@media screen and (max-width: 992px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 80px 0 30px;
+    }
+
+    .profile-image-container {
+        flex: 0 0 250px;
+    }
+
+    .skills-tags {
+        justify-content: center;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(33.33% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .skill-tag {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-image-container {
+        flex: 0 0 200px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-tag {
+        flex: 1 0 100%;
+    }
+}

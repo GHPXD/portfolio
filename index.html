@@ -4,40 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Henrique Pereira - Portfolio</title>
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./assets/css/utils/variables.css">
+    <link rel="stylesheet" href="./assets/css/utils/reset.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components/navigation.css">
+    <link rel="stylesheet" href="./assets/css/components/about.css">
+    <link rel="stylesheet" href="./assets/css/components/experience.css">
+    <link rel="stylesheet" href="./assets/css/components/projects.css">
+    <link rel="stylesheet" href="./assets/css/components/certificates.css">
+    <link rel="stylesheet" href="./assets/css/components/contact.css">
+    <link rel="stylesheet" href="./assets/css/components/modal.css">
+    <link rel="stylesheet" href="./assets/css/utils/responsive.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>  
+    <!-- Canvas para animação de fundo -->
+    <canvas id="canvas"></canvas>
+    
+    <!-- Navegação -->
     <nav>
-    <div class="nav-container">
-        <div class="nav-logo">Guilherme Henrique Pereira</div>
-        <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="nav-container">
+            <div class="nav-logo">Guilherme Henrique Pereira</div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#sobre-mim">Sobre Mim</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#certificados">Certificados</a>
+                <a href="#contato">Contato</a>
+            </div>
         </div>
-        <div class="nav-links">
-            <a href="#sobre-mim">Sobre Mim</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#contato">Contato</a>
-        </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="page-container">
         <!-- Seção Sobre Mim -->
         <section id="sobre-mim" class="about-section">
-            <div class="profile-image-container">
-                <img src="./data/media/profile/ghpxd.jpg" alt="Foto de Perfil" class="profile-image">
+            <div class="about-image">
+                <div class="profile-container">
+                    <div class="profile-image-container">
+                        <img src="/assets/media/profile/ghpxd.jpg" alt="Foto de Perfil" class="profile-image">
+                    </div>
+                </div>
             </div>
             
             <div class="about-content">
                 <h1 class="main-title">Guilherme Henrique Pereira</h1>
+                <h3>Desenvolvedor Back-end</h3>
                 <p class="description">
-                    Analista de sistemas com 3 anos de experiência no desenvolvimento, validação e teste de softwares. Apto a atuar com diferentes linguagens de programação, garantindo a qualidade de funcionamento dos produtos e o cumprimento dos requisitos de funcionalidade.
+                    Desenvolvedor com sólida experiência em backend com Java e Spring Boot, automações em Python, análise de dados com Pandas e visualização com Power BI. 
+                    Atuação em empresas de grande porte, com foco em inovação, eficiência e digitalização de processos. 
+                    Familiarizado com ambientes ágeis (Scrum/Kanban), ferramentas DevOps e integração contínua. 
+                    Interesse constante em aprendizado técnico e melhoria contínua.
                 </p>
                 <div class="skills-section">
                     <h2 class="skills-title">Habilidades</h2>
@@ -55,7 +80,6 @@
                         <span class="skill-tag sap">SAP 4HANA</span>
                         <span class="skill-tag gitlab">GIT</span>
                         <span class="skill-tag html">SCRUM</span>
-                        
                     </div>
                 </div>
             </div>
@@ -68,7 +92,7 @@
             <div class="experience-carousel-container">
                 <div class="experience-carousel-wrapper">
                     <div id="experience-carousel" class="experience-carousel">
-                        <!-- Mantendo seus cards exatamente como estavam -->
+                        <!-- Card 1 - Emprego Atual -->
                         <div class="experience-card current-job">
                             <h3 class="card-title">Data Science</h3>
                             <p class="card-company">Volvo Group</p>
@@ -96,6 +120,7 @@
                             <div class="card-date">Mar 2025 - Presente</div>
                         </div>
 
+                        <!-- Card 2 -->
                         <div class="experience-card">
                             <h3 class="card-title">Analista de Melhorias e Automações JR</h3>
                             <p class="card-company">Votorantim</p>
@@ -123,6 +148,7 @@
                             <div class="card-date">Jul 2024 - Mar 2025</div>
                         </div>
 
+                        <!-- Card 3 -->
                         <div class="experience-card">
                             <h3 class="card-title">Desenvolvedor Java - Estagiário</h3>
                             <p class="card-company">Telefonica Brasil S/A (VIVO)</p>
@@ -155,7 +181,7 @@
                     </div>
                 </div>
                 
-                <!-- Setas de navegação -->
+                <!-- Controles de Navegação -->
                 <div class="experience-carousel-controls">
                     <button class="experience-carousel-btn prev-btn" onclick="moveExperienceCarousel(-1)">
                         <i class="fas fa-chevron-left"></i>
@@ -173,15 +199,15 @@
             
             <div class="projects-filter">
                 <button onclick="filterProjects('all')" class="filter-btn active">Todos</button>
-                <button onclick="filterProjects('Python')" class="filter-btn">Python</button>
-                <button onclick="filterProjects('JavaScript')" class="filter-btn">JavaScript</button>
-                <button onclick="filterProjects('Java')" class="filter-btn">Java</button>
+                <button onclick="filterProjects('Web')" class="filter-btn">Web</button>
+                <button onclick="filterProjects('Data')" class="filter-btn">Data Science</button>
+                <button onclick="filterProjects('Automacao')" class="filter-btn">Automação</button>
+                <button onclick="filterProjects('Backend')" class="filter-btn">Backend</button>
             </div>
 
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <div id="project-carousel" class="projects-carousel">
-                        <!-- Os projetos serão inseridos aqui dinamicamente -->
                     </div>
                 </div>
                 <div class="carousel-controls">
@@ -194,44 +220,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Modal para Projetos -->
-        <div id="projectModal" class="project-modal">
-            <div class="project-modal-content">
-                <span class="project-close">&times;</span>
-                <div class="project-modal-header">
-                    <img id="projectModalImage" src="" alt="">
-                    <div class="project-modal-info">
-                        <h2 id="projectModalTitle"></h2>
-                        <div id="projectModalTech" class="project-modal-tech"></div>
-                    </div>
-                </div>
-                <div class="project-modal-buttons">
-                    <a id="projectRepoButton" href="#" target="_blank" class="project-btn repo-btn">
-                        <i class="fab fa-github"></i> Repositório
-                    </a>
-                    <button id="projectReadmeButton" class="project-btn readme-btn">
-                        <i class="fas fa-file-alt"></i> Documentação
-                    </button>
-                </div>
-                <div id="projectReadmeContent" class="project-readme-content" style="display: none;">
-                    <div class="readme-header">
-                        <h3>Documentação do Projeto</h3>
-                        <button id="closeReadmeButton" class="close-readme-btn">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div id="readmeText" class="readme-text"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal for Full-Screen Image Viewer -->
-        <div id="certificateModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
-        </div>
 
         <!-- Seção Certificados -->
         <section id="certificados" class="certificates-section">
@@ -263,37 +251,78 @@
             </div>
         </section>
 
-        <!-- Modal para Certificados (mantendo o zoom atual) -->
-        <div id="certificateModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
-        </div>
-
-
         <!-- Seção Contato -->
         <footer id="contato" class="contact-section">
             <div class="card">
                 <div class="left">
-                  <img src="https://uiverse.io/astronaut.png" alt="Astronaut" class="image" />
+                    <img src="https://uiverse.io/astronaut.png" alt="Astronaut" class="image" />
                 </div>
                 <div class="right">
-                  <div class="heading">Contato</div>
-                  <div class="icons">
-                    <a href="https://linkedin.com/in/ghpxd" target="_blank" class="linkedin">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/ghpxd" target="_blank" class="github">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:ghp17@outlook.com" class="email">
-                      <i class="fas fa-envelope"></i>
-                    </a>
-                  </div>
+                    <div class="heading">Contato</div>
+                    <div class="icons">
+                        <a href="https://linkedin.com/in/ghpxd" target="_blank" class="linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ghpxd" target="_blank" class="github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:ghp17@outlook.com" class="email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-              </div>                            
+            </div>                            
         </footer>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Modal para Projetos -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="project-close">&times;</span>
+            <div class="project-modal-header">
+                <img id="projectModalImage" src="" alt="">
+                <div class="project-modal-info">
+                    <h2 id="projectModalTitle"></h2>
+                    <div id="projectModalTech" class="project-modal-tech"></div>
+                </div>
+            </div>
+            <div class="project-modal-buttons">
+                <a id="projectRepoButton" href="#" target="_blank" class="project-btn repo-btn">
+                    <i class="fab fa-github"></i> Repositório
+                </a>
+                <button id="projectReadmeButton" class="project-btn readme-btn">
+                    <i class="fas fa-file-alt"></i> Documentação
+                </button>
+            </div>
+            <div id="projectReadmeContent" class="project-readme-content" style="display: none;">
+                <div class="readme-header">
+                    <h3>Documentação do Projeto</h3>
+                    <button id="closeReadmeButton" class="close-readme-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="readmeText" class="readme-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Certificados -->
+    <div id="certificateModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="./assets/js/data/projects-data.js"></script>
+    <script src="./assets/js/data/certificates-data.js"></script>
+    <script src="./assets/js/components/canvas-animation.js"></script>
+    <script src="./assets/js/components/navigation.js"></script>
+    <script src="./assets/js/components/carousel.js"></script>
+    <script src="./assets/js/components/projects.js"></script>
+    <script src="./assets/js/components/certificates.js"></script>
+    <script src="./assets/js/components/modal.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/components/experience.js"></script>
 </body>
 </html>
