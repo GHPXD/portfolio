@@ -22,7 +22,17 @@ const projectsData = {
         category: 'Data'
     },
 
+
+
+    'Automação de Aprovação de Tarefas - Sistema CAP': {
+        repo: 'https://github.com/GHPXD/CAP',
+        readme: './data/docs/CAP.md',
+        tech: ['python', 'pandas', 'selenium', 'tkinter'],
+        image: './assets/media/projects/',
+        category: 'Automacao'
+    },
     
+
 
     'Jump Man Game': {
         repo: 'https://ghpxd.github.io/run-man/',
