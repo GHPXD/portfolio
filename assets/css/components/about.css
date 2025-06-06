@@ -115,6 +115,14 @@
 .tech-icon.pdfplumber, .skill-tag.pdfplumber {background-color: #C92A2A; color: #FFFFFF;}
 .tech-icon.pyinstaller, .skill-tag.pyinstaller {background-color: #5D6D7E; color: #FFFFFF;}
 .tech-icon.pyspark, .skill-tag.pyspark {background-color: #F89820; color: #FFFFFF;}
+.tech-icon.matplotlib, .skill-tag.matplotlib { background-color: #8B008B; color: #FFFFFF; }
+.tech-icon.seaborn, .skill-tag.seaborn { background-color: #008080; color: #FFFFFF; }
+.tech-icon.plotly, .skill-tag.plotly { background-color: #636EFA; color: #FFFFFF; }
+.tech-icon.dash, .skill-tag.dash { background-color: #3F51B5; color: #FFFFFF; }
+.tech-icon.tkinter, .skill-tag.tkinter { background-color: #78909C; color: #FFFFFF; }
+.tech-icon.pdf2image, .skill-tag.pdf2image { background-color: #A52A2A; color: #FFFFFF; }
+.tech-icon.tensorflow, .skill-tag.tensorflow { background-color: #FF6F00; color: #FFFFFF; }
+.tech-icon.pytesseract, .skill-tag.pytesseract { background-color: #424242; color: #FFFFFF; }
 
 /* Responsividade */
 @media screen and (max-width: 992px) {

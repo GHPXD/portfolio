@@ -7,7 +7,8 @@ let isTransitioning = false;
 
 // Função para criar card do projeto
 function createProjectCard(projectName, projectData) {
-    const techIcons = projectData.tech.map(tech => 
+    // Adicionamos .slice(0, 5) para pegar apenas os 5 primeiros itens do array
+    const techIcons = projectData.tech.slice(0, 5).map(tech => 
         `<span class="tech-icon ${tech}" title="${tech.charAt(0).toUpperCase() + tech.slice(1)}">
             <i class="${getTechIcon(tech)}"></i>
         </span>`
@@ -39,6 +40,29 @@ function getTechIcon(tech) {
         pandas: 'fas fa-table',
         pyplot: 'fas fa-chart-line',
         pyspark: 'fas fa-fire',
+        'spring-boot': 'fas fa-leaf',
+        oraclesql: 'fas fa-database',
+        mysql: 'fas fa-database',
+        docker: 'fab fa-docker',
+        react: 'fab fa-react',
+        aws: 'fab fa-aws',
+        sap: 'fas fa-cogs',
+        powerbi: 'fas fa-chart-bar',
+        'power-automate': 'fas fa-exchange-alt',
+        selenium: 'fas fa-robot',
+        numpy: 'fas fa-square-root-alt',
+        pdfplumber: 'fas fa-file-pdf',
+        pyinstaller: 'fas fa-box-open',
+        vba: 'fas fa-file-code',
+        kafka: 'fas fa-stream',
+        matplotlib: 'fas fa-chart-pie',
+        seaborn: 'fas fa-chart-area',
+        plotly: 'fas fa-chart-line',
+        dash: 'fas fa-tachometer-alt',
+        tkinter: 'fas fa-desktop',
+        pdf2image: 'fas fa-file-image',
+        tensorflow: 'fas fa-brain',
+        pytesseract: 'fas fa-spell-check'
     };
     return icons[tech] || 'fas fa-code';
 }

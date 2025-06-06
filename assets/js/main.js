@@ -1,9 +1,8 @@
 // Função para filtrar projetos
-// Corrija a função filterProjects
 function filterProjects(tech) {
     currentFilter = tech;
     
-    // Atualizar botões ativos - CORREÇÃO AQUI
+    // Atualizar botões ativos
     const buttons = document.querySelectorAll('.projects-filter .filter-btn');
     buttons.forEach(btn => {
         btn.classList.remove('active');
@@ -62,7 +61,7 @@ function filterCertificates(tech) {
 }
  
 // Função de rolagem suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         
