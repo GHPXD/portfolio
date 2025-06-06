@@ -62,7 +62,7 @@ function filterCertificates(tech) {
 }
  
 // Função de rolagem suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         
