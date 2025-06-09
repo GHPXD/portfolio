@@ -81,7 +81,7 @@
 }
 
 .skill-tag {
-    flex: 1 0 calc(20% - 10px);
+    flex: 1 0 calc(50% - 10px);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;

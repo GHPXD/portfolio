@@ -46,10 +46,6 @@
     }
 
     /* Navegação */
-    .nav-links {
-        display: none; /* Preparar para menu móvel */
-    }
-
     .nav-container {
         justify-content: center;
     }
@@ -215,8 +211,8 @@
 
 @media screen and (max-width: 600px) {
     .filter-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
     
     .projects-filter, .certificates-filter {

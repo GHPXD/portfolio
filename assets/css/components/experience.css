@@ -385,3 +385,48 @@
         font-size: 12px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .experience-carousel {
+        /* Remove o layout de flex para empilhar os cartões */
+        display: block; 
+        position: relative;
+        padding-left: 30px; /* Espaço para a linha do tempo */
+    }
+
+    /* A linha vertical da timeline */
+    .experience-carousel::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        bottom: 20px;
+        width: 3px;
+        background-color: #3b82f6; 
+        border-radius: 3px;
+    }
+
+    .experience-carousel .experience-card {
+        margin-bottom: 30px; /* Espaçamento entre os cards */
+        position: relative;
+    }
+
+    /* O círculo em cada item da timeline */
+    .experience-carousel .experience-card::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: -25px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white;
+        border: 3px solid #3b82f6;
+        z-index: 1;
+    }
+
+    /* Remove os controles do carrossel que não são mais necessários */
+    .experience-carousel-controls {
+        display: none;
+    }
+}
