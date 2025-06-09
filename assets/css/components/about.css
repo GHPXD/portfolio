@@ -64,29 +64,97 @@
     color: var(--text-primary);
 }
 
-.skills-section { 
-    display: flex; 
-    flex-direction: column; 
+.skills-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
 }
 
-.skills-title {
-    font-size: 1.5rem;
+.skills-categories-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.skill-category {
+    margin-bottom: 40px;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    color: #a5b4fc; /* Um azul claro para destaque */
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    font-weight: 600;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: rgba(31, 41, 55, 0.4); /* Fundo escuro semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: scale(1.1);
+}
+
+.skill-card span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
 .skills-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.skill-tag {
-    flex: 1 0 calc(50% - 10px);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    text-align: center;
-}
+/* Cores específicas para os ícones */
+.java-icon { color: #f89820; }
+.spring-icon { color: #6DB33F; }
+.microservices-icon, .api-icon { color: #818cf8; }
+.kafka-icon { color: #cbd5e1; }
+.python-icon { color: #3776AB; }
+.pandas-icon, .databricks-icon { color: #e879f9; }
+.pyspark-icon { color: #F89820; }
+.powerbi-icon { color: #F2C811; }
+.docker-icon, .react-icon { color: #61DAFB; }
+.aws-icon { color: #FF9900; }
+.jenkins-icon { color: #D24939; }
+.git-icon { color: #F05032; }
+.jira-icon { color: #0052CC; }
+.selenium-icon { color: #43B02A; }
+.powerautomate-icon { color: #0078D4; }
+.sql-icon { color: #f97316; }
+.scrum-icon { color: #22d3ee; }
 
 /* Cores das tecnologias */
 .tech-icon.python, .skill-tag.python {background-color: #dbeafe; color: #3776AB;}
