@@ -316,3 +316,76 @@
         font-size: 0.9rem;
     }
 }
+
+/* --- Estilos para Animação de Virar Certificado --- */
+
+/* Contêiner que define a perspectiva 3D */
+.flip-card {
+    background-color: transparent;
+    width: 80%;
+    max-width: 900px;
+    height: 80vh;
+    perspective: 1000px; /* Efeito 3D */
+    margin: auto;
+    cursor: pointer;
+}
+
+/* Contêiner que faz a transição e a animação */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Classe que será adicionada via JS para virar o card */
+.flip-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Estilos para a frente e o verso */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Posiciona o verso */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Garante que a imagem ocupe o espaço corretamente */
+.flip-card .modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: auto; /* Reseta o width para não forçar 100% */
+}
+
+/* Mensagem de dica para o usuário */
+.flip-hint-message {
+    display: none; /* Escondido por padrão */
+    text-align: center;
+    color: #ccc;
+    margin-top: 15px;
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.flip-hint-message i {
+    margin-right: 8px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}

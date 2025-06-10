@@ -99,20 +99,20 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
 }
 
 .skill-card {
     background-color: rgba(31, 41, 55, 0.4); /* Fundo escuro semitransparente */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 25px 15px;
+    padding: 15px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(8px);
@@ -126,7 +126,7 @@
 }
 
 .skill-card i {
-    font-size: 2.8rem;
+    font-size: 2rem;
     margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
@@ -164,6 +164,7 @@
 .powerautomate-icon { color: #0078D4; }
 .sql-icon { color: #f97316; }
 .scrum-icon { color: #22d3ee; }
+.azure-icon { color: #0078D4; }
 
 /* Cores das tecnologias */
 .tech-icon.python, .skill-tag.python {background-color: #dbeafe; color: #3776AB;}

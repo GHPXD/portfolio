@@ -5,12 +5,19 @@ let filteredCertificates = [];
 let certificateCarouselInterval;
 let isCertificateTransitioning = false;
 
+// Variáveis para controlar o estado do modal de virar
+const flipCardInner = document.querySelector('.flip-card-inner');
+const modalImageFront = document.getElementById('modalImageFront');
+const modalImageBack = document.getElementById('modalImageBack');
+const flipHint = document.getElementById('flip-hint');
+let isFlippable = false;
+
 // Função para criar card de certificado
 function createCertificateCard(certificateName, certificateData) {
     return `
         <div class="carousel-certificate-card" data-certificate="${certificateName}">
             <div class="carousel-certificate-image-container">
-                <img src="${certificateData.image}" alt="${certificateName}" loading="lazy">
+                <img src="${certificateData.image[0]}" alt="${certificateName}" loading="lazy">
                 <div class="carousel-certificate-overlay">
                     <h3 class="carousel-certificate-title">${certificateName}</h3>
                 </div>
@@ -126,19 +133,42 @@ function addCertificateCardEventListeners() {
     });
 }
 
-// Função para abrir modal do certificado (mantendo o zoom atual)
+// Função para abrir modal do certificado 
 function openCertificateModal(certificateName, certificateData) {
     const modal = document.getElementById('certificateModal');
-    const modalImg = document.getElementById('modalImage');
     const captionText = document.getElementById('caption');
     
     modal.style.display = "block";
-    modalImg.src = certificateData.image;
     captionText.innerHTML = certificateName;
+
+    // Garante que o card comece sempre virado para a frente
+    flipCardInner.classList.remove('is-flipped');
     
+    const images = certificateData.image;
+    isFlippable = Array.isArray(images) && images.length > 1;
+
+    if (isFlippable) {
+        // Se tem 2 imagens (frente e verso)
+        modalImageFront.src = images[0];
+        modalImageBack.src = images[1];
+        flipHint.style.display = 'block'; // Mostra a dica
+    } else {
+        // Se tem apenas 1 imagem
+        modalImageFront.src = images[0];
+        modalImageBack.src = ''; // Limpa a imagem do verso
+        flipHint.style.display = 'none'; // Esconde a dica
+    }
+
     // Pausar autoplay
     stopCertificateAutoplay();
 }
+
+// Event listener para virar o card
+flipCardInner.addEventListener('click', () => {
+    if (isFlippable) {
+        flipCardInner.classList.toggle('is-flipped');
+    }
+});
 
 // Inicializar carrossel de certificados quando a página carregar
 document.addEventListener('DOMContentLoaded', function() {
