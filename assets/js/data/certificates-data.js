@@ -21,5 +21,9 @@ const certificatesData = {
             './assets/media/certificates/Programa_Desenvolve02.png'
         ],
         category: 'dados'
+    },
+    'Santander Bootcamp 2023 - Ciencia de Dados com Python': {
+        image: ['./assets/media/certificates/Ciencia de Dados com Python.png'],
+        category: 'dados'
     }
 };

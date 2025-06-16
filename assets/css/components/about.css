@@ -201,6 +201,15 @@
 .tech-icon.pdf2image, .skill-tag.pdf2image { background-color: #A52A2A; color: #FFFFFF; }
 .tech-icon.tensorflow, .skill-tag.tensorflow { background-color: #FF6F00; color: #FFFFFF; }
 .tech-icon.pytesseract, .skill-tag.pytesseract { background-color: #424242; color: #FFFFFF; }
+.tech-icon.spring-data-jpa, .skill-tag.spring-data-jpa { background-color: #5a9c2a; color: #FFFFFF; }
+.tech-icon.spring-security, .skill-tag.spring-security { background-color: #4a8d1a; color: #FFFFFF; }
+.tech-icon.postgresql, .skill-tag.postgresql { background-color: #336791; color: #FFFFFF; }
+.tech-icon.maven, .skill-tag.maven { background-color: #C74E23; color: #FFFFFF; }
+.tech-icon.lombok, .skill-tag.lombok { background-color: #E0234E; color: #FFFFFF; }
+.tech-icon.swagger, .skill-tag.swagger { background-color: #85EA2D; color: #000000; }
+.tech-icon.jwt, .skill-tag.jwt { background-color: #000000; color: #FFFFFF; }
+.tech-icon.junit, .skill-tag.junit { background-color: #d92e26; color: #FFFFFF; }
+.tech-icon.thymeleaf, .skill-tag.thymeleaf { background-color: #009639; color: #FFFFFF; }
 
 /* Responsividade */
 @media screen and (max-width: 992px) {

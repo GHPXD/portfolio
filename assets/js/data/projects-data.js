@@ -57,10 +57,10 @@ const projectsData = {
 
 // BACK-END
     'Sistema Pet Shop': {
-        repo: 'https://github.com/GHPXD/PJBL_POO_01',
-        readme: './data/docs/projeto5.md',
-        tech: ['java'],
-        image: './assets/media/projects/petshop.jpg',
+        repo: 'https://github.com/GHPXD/pet',
+        readme: './assets/docs/Petshop.md',
+        tech: ['java', 'spring-boot', 'spring-security', 'jwt', 'postgresql', 'maven', 'swagger'],
+        image: './assets/media/projects/petshop.png',
         category: 'Backend'
     },
     

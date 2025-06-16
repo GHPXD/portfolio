@@ -62,7 +62,16 @@ function getTechIcon(tech) {
         tkinter: 'fas fa-desktop',
         pdf2image: 'fas fa-file-image',
         tensorflow: 'fas fa-brain',
-        pytesseract: 'fas fa-spell-check'
+        pytesseract: 'fas fa-spell-check',
+        'spring-data-jpa': 'fas fa-layer-group',
+        'spring-security': 'fas fa-shield-alt',
+        postgresql: 'fas fa-database',
+        maven: 'fas fa-cube',
+        lombok: 'fas fa-puzzle-piece',
+        swagger: 'fas fa-book-open',
+        jwt: 'fas fa-key',
+        junit: 'fas fa-vial',
+        thymeleaf: 'fas fa-leaf'
     };
     return icons[tech] || 'fas fa-code';
 }
