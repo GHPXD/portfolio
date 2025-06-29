@@ -23,7 +23,13 @@ const projectsData = {
         image: './assets/media/projects/Extrator Nota Fiscal.png',
         category: 'Data'
     },
-
+    'Recomendador de Filmes': {
+        repo: 'https://github.com/GHPXD/Recomendador-de-Filmes',
+        readme: './assets/docs/Recomendador de Filmes.md',
+        tech: ['python', 'pandas', 'numpy', 'scikit-learn', 'scikit-surprise', 'fuzzywuzzy', 'tkinter'],
+        image: './assets/media/projects/Recomendador de Filmes.png',
+        category: 'Data'
+    },
 
 
 // AUTOMAÇÃO
