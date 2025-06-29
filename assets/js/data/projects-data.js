@@ -30,6 +30,7 @@ const projectsData = {
         image: './assets/media/projects/Recomendador de Filmes.png',
         category: 'Data'
     },
+    
 
 
 // AUTOMAÇÃO
@@ -40,7 +41,13 @@ const projectsData = {
         image: './assets/media/projects/CAP.png',
         category: 'Automacao'
     },
-    
+    'Assistente de IA para Busca de Empregos': {
+    repo: 'https://github.com/GHPXD/Assistente-de-IA-para-Busca-de-Empregos',
+    readme: './assets/docs/IA Busca Empregos.md',
+    tech: ['python', 'langchain', 'serpapi', 'beautifulsoup4', 'pandas', 'requests', 'openpyxl'],
+    image: './assets/media/projects/IA Busca Empregos.png',
+    category: 'Automacao'
+    },
 
 
 // WEB    

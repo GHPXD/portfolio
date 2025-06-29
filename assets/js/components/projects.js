@@ -71,7 +71,15 @@ function getTechIcon(tech) {
         swagger: 'fas fa-book-open',
         jwt: 'fas fa-key',
         junit: 'fas fa-vial',
-        thymeleaf: 'fas fa-leaf'
+        thymeleaf: 'fas fa-leaf',
+        'scikit-learn': 'fas fa-brain',
+        'scikit-surprise': 'fas fa-gift',
+        fuzzywuzzy: 'fas fa-search',
+        langchain: 'fas fa-link',
+        serpapi: 'fas fa-search-dollar',
+        beautifulsoup4: 'fas fa-leaf',
+        requests: 'fas fa-paper-plane',
+        openpyxl: 'fas fa-file-excel'
     };
     return icons[tech] || 'fas fa-code';
 }

@@ -210,6 +210,14 @@
 .tech-icon.jwt, .skill-tag.jwt { background-color: #000000; color: #FFFFFF; }
 .tech-icon.junit, .skill-tag.junit { background-color: #d92e26; color: #FFFFFF; }
 .tech-icon.thymeleaf, .skill-tag.thymeleaf { background-color: #009639; color: #FFFFFF; }
+.tech-icon.scikit-learn, .skill-tag.scikit-learn { background-color: #F7931E; color: #FFFFFF; }
+.tech-icon.scikit-surprise, .skill-tag.scikit-surprise { background-color: #8A2BE2; color: #FFFFFF; }
+.tech-icon.fuzzywuzzy, .skill-tag.fuzzywuzzy { background-color: #ADD8E6; color: #000000; }
+.tech-icon.langchain, .skill-tag.langchain { background-color: #8A2BE2; color: #FFFFFF; }
+.tech-icon.serpapi, .skill-tag.serpapi { background-color: #34A853; color: #FFFFFF; }
+.tech-icon.beautifulsoup4, .skill-tag.beautifulsoup4 { background-color: #FF7F50; color: #FFFFFF; }
+.tech-icon.requests, .skill-tag.requests { background-color: #007BFF; color: #FFFFFF; }
+.tech-icon.openpyxl, .skill-tag.openpyxl { background-color: #217346; color: #FFFFFF; }
 
 /* Responsividade */
 @media screen and (max-width: 992px) {
